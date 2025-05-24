@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If-else and Boolean</title>
+  </head>
+  <body>
+    <script>
+      let age = 12;
+      let gender = Math.random() * 2;
+      let displayGender;
+      let discount;
+      const ticketPrice = 215;
+      let finalAmt;
+      if (gender > 0 && gender <= 1) {
+        displayGender = "Male";
+      } else {
+        displayGender = "Female";
+      }
+      //   alert(`The gender is ${displayGender}`);
+
+      if (displayGender === "Female") {
+        discount = "50%";
+        finalAmt = ticketPrice - (50 / 100) * ticketPrice;
+      } else if (displayGender === "Female" && age >= 65) {
+        discount = "70%"; //or only 30% of the ticket
+        finalAmt = (30 / 100) * ticketPrice;
+      } else {
+        finalAmt = ticketPrice;
+      }
+
+      alert(
+        `The gender is ${displayGender} and the Final amount is ${finalAmt}`
+      );
+    </script>
+  </body>
+</html>

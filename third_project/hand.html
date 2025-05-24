@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="hand.css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissor Game</h1>
+    <button
+      onclick="
+        let computerChoice = generateComputerChoice();
+        alert(`You = Rock & Computer = ${computerChoice}`);
+    "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+        computerChoice = generateComputerChoice();
+        alert(`You = Paper & Computer = ${computerChoice}`);
+    "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+        computerChoice = generateComputerChoice();
+        alert(`You = Scissor & Computer = ${computerChoice}`);
+    "
+    >
+      Scissor
+    </button>
+
+    <script>
+      function generateComputerChoice() {
+        let randomNumber = Math.floor(Math.random() * 3);
+        if (randomNumber === 0) {
+          return "Rock";
+        } else if (randomNumber === 1) {
+          return "Paper";
+        } else {
+          return "Scissor";
+        }
+      }
+    </script>
+  </body>
+</html>

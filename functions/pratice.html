@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Practice Exercise</title>
+  </head>
+  <body>
+    <script>
+      //THIS IS task 1.
+      function checker(num1) {
+        if (num1 % 2 == 0) {
+          return "Even number";
+        } else {
+          return "Odd number";
+        }
+      }
+      console.log(checker(5));
+      console.log(checker(4));
+
+      //THIS IS task 2.
+      function findLarger(num1, num2) {
+        if (num1 > num2) {
+          return `The larger number is ${num1}`;
+        } else if (num2 > num1) {
+          return `The larger number is ${num2}`;
+        } else {
+          return "They are equal";
+        }
+      }
+      console.log(findLarger(5, 7));
+      console.log(findLarger(5, 5));
+      console.log(findLarger(4, 5));
+
+      //THIS IS task 3.
+      function intoFahrenheit(celcius) {
+        return `Value in Fahrenheit is ${(9 / 5) * celcius + 32}`;
+      }
+      console.log(intoFahrenheit(32));
+    </script>
+  </body>
+</html>
