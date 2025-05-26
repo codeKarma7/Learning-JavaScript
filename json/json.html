@@ -7,6 +7,27 @@
   </head>
   <body>
     <script>
+      /*This is to learn about json.stringify() and json.parse()*/
+      // let product = {
+      //   name: "Tshirt",
+      //   price: 789,
+      //   rating: {
+      //     stars: 405,
+      //     noOfReviews: 453,
+      //   },
+      // };
+
+      // console.log(typeof product); // type check
+      // console.log(product);
+      // let str = JSON.stringify(product); //object to string
+      // console.log(typeof str);
+      // console.log(str); //output after stringify
+
+      /*Local storage*/
+      // localStorage.setItem("Name", "Sulachhen");
+      // localStorage.setItem("Age", "19");
+      // localStorage.setItem("Address", "Bhaktapur");
+
       let product = {
         name: "Tshirt",
         price: 789,
@@ -15,11 +36,8 @@
           noOfReviews: 453,
         },
       };
-      console.log(typeof product);
-      console.log(product);
-      let str = JSON.stringify(product);
-      console.log(typeof str);
-      console.log(str);
+
+      localStorage.setItem("Product", JSON.stringify(product));
     </script>
   </body>
 </html>
