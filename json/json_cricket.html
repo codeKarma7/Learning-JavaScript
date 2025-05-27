@@ -51,6 +51,11 @@
       Reset
     </button>
 
+    <h3 id="user-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
+
     <script>
       let scoreStr = localStorage.getItem("Score");
       let score;
@@ -68,6 +73,8 @@
         score.displayScore = function () {
           return `Win : ${score.win}, Lost : ${score.lost}, Tie : ${score.tie}`;
         };
+
+        showResult();
       }
 
       function generateComputerChoice() {
@@ -121,13 +128,18 @@
       function showResult(userMove, computerMove, resultMsg) {
         localStorage.setItem("Score", JSON.stringify(score));
 
-        alert(
-          `You have choosen ${userMove}. Computer choice is ${computerMove} and ${resultMsg}
+        document.querySelector("#user-move").innerText =
+          userMove !== undefined ? `You have choosen ${userMove}` : "";
 
-          ${resultMsg}
+        document.querySelector("#computer-move").innerText =
+          computerMove !== undefined
+            ? `Computer choice is ${computerMove}`
+            : "";
 
-          ${score.displayScore()}`
-        );
+        document.querySelector("#result").innerText =
+          resultMsg !== undefined ? `${resultMsg}` : "";
+
+        document.querySelector("#score").innerText = score.displayScore();
       }
     </script>
   </body>
